@@ -2,11 +2,15 @@ library(ggplot2)
 
 # Load dataset
 
-na_data <- read.csv("Sentence_Wise_Discourse_markers_na.csv")
+na_data <- read.csv("C:/Users/meghn/OneDrive/Documents/Phd - work/Stats/Term Paper/Corpus-analysis-of-discourse-markers-na-in-Hindi/data/Sentence_Wise_Discourse_markers_na.csv")
 
 # Inspect structure and summary
 head(na_data)
 summary(na_data)
+
+dp_na_df <- na_data[na_data$na == 'Neg na', ]
+
+summary(dp_na_df)
 
 # Subset: only 'na' occurrences
 dp_na_df <- na_data[na_data$na == 'na', ]
